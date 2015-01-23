@@ -11,6 +11,7 @@ import android.content.Intent;
 import android.content.IntentSender.SendIntentException;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.SystemClock;
 import android.provider.MediaStore;
 import android.support.v4.widget.SlidingPaneLayout;
@@ -262,8 +263,12 @@ public class ConversationActivity extends XmppActivity
 	}
 
 	public void sendReadMarkerIfNecessary(final Conversation conversation) {
-		if (!mActivityPaused && conversation != null && !conversation.isRead()) {
-			xmppConnectionService.sendReadMarker(conversation);
+		if (!mActivityPaused && conversation != null) {
+			if (!conversation.isRead()) {
+				xmppConnectionService.sendReadMarker(conversation);
+			} else {
+				xmppConnectionService.markRead(conversation);
+			}
 		}
 	}
 
@@ -742,9 +747,15 @@ public class ConversationActivity extends XmppActivity
 		if (this.xmppConnectionServiceBound) {
 			this.xmppConnectionService.getNotificationService().setIsInForeground(true);
 		}
-		if (!isConversationsOverviewVisable() || !isConversationsOverviewHideable()) {
-			sendReadMarkerIfNecessary(getSelectedConversation());
-		}
+		new Handler().postDelayed(new Runnable() {
+			@Override
+			public void run() {
+				if (!isConversationsOverviewVisable() || !isConversationsOverviewHideable()) {
+					sendReadMarkerIfNecessary(getSelectedConversation());
+				}
+			}
+		},1000);
+
 	}
 
 	@Override
