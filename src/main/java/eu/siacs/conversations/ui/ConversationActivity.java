@@ -747,14 +747,10 @@ public class ConversationActivity extends XmppActivity
 		if (this.xmppConnectionServiceBound) {
 			this.xmppConnectionService.getNotificationService().setIsInForeground(true);
 		}
-		new Handler().postDelayed(new Runnable() {
-			@Override
-			public void run() {
-				if (!isConversationsOverviewVisable() || !isConversationsOverviewHideable()) {
-					sendReadMarkerIfNecessary(getSelectedConversation());
-				}
-			}
-		},1000);
+
+		if (!isConversationsOverviewVisable() || !isConversationsOverviewHideable()) {
+			sendReadMarkerIfNecessary(getSelectedConversation());
+		}
 
 	}
 
