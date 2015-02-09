@@ -19,7 +19,6 @@
   <string name="title_activity_settings">Nastavení</string>
   <string name="title_activity_conference_details">Detaily konference</string>
   <string name="title_activity_contact_details">Detaily kontaktu</string>
-  <string name="title_activity_conversations">Conversations</string>
   <string name="title_activity_sharewith">Sdílet s konverzací</string>
   <string name="title_activity_start_conversation">Začít konverzaci</string>
   <string name="title_activity_choose_contact">Vybrat kontakt</string>
@@ -267,7 +266,6 @@
   <string name="pref_force_encryption_summary">Vždy zasílat šifrované zprávy (mimo konference)</string>
   <string name="pref_dont_save_encrypted">Neukládat šifrované zprávy</string>
   <string name="pref_dont_save_encrypted_summary">Varování: Toto může vést ke ztrátě zpráv</string>
-  <string name="pref_enable_legacy_ssl">Povolit zastaralé SSL</string>
   <string name="pref_expert_options">Expertní nastavení</string>
   <string name="pref_expert_options_summary">S tímto zacházejte velmi opatrně</string>
   <string name="title_activity_about">O aplikaci Conversations</string>

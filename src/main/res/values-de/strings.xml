@@ -19,7 +19,6 @@
   <string name="title_activity_settings">Einstellungen</string>
   <string name="title_activity_conference_details">Konferenz-Details</string>
   <string name="title_activity_contact_details">Kontaktdetails</string>
-  <string name="title_activity_conversations">Conversations</string>
   <string name="title_activity_sharewith">Mit Unterhaltung teilen</string>
   <string name="title_activity_start_conversation">Beginne Unterhaltung</string>
   <string name="title_activity_choose_contact">Kontakt auswählen</string>
@@ -267,8 +266,6 @@
   <string name="pref_force_encryption_summary">Nachrichten immer verschlüsseln (außer für Konferenzen)</string>
   <string name="pref_dont_save_encrypted">Verschlüsselte Nachrichten nicht speichern</string>
   <string name="pref_dont_save_encrypted_summary">Achtung: kann zu Nachrichtenverlust führen</string>
-  <string name="pref_enable_legacy_ssl">Alte SSL-Version aktivieren</string>
-  <string name="pref_enable_legacy_ssl_summary">Alte SSL-Version 3 und unsichere Verschlüsselungsalgorithmen aktivieren </string>
   <string name="pref_expert_options">Einstellungen für Experten</string>
   <string name="pref_expert_options_summary">Hier bitte vorsichtig sein</string>
   <string name="title_activity_about">Über Conversations</string>
@@ -419,4 +416,5 @@
   <string name="avatar_has_been_published">Avatar wurde gespeichert</string>
   <string name="sending_x_file">Sende %s</string>
   <string name="offering_x_file">%s angeboten</string>
+  <string name="hide_offline">verstecke offline</string>
 </resources>
